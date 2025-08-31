@@ -1,0 +1,95 @@
+{
+  "title": "Lead Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchTerms": {
+      "title": "Search terms",
+      "description": "Comma-separated business search terms (e.g. 'hair salon, nail salon, beauty salon').",
+      "type": "string",
+      "editor": "textarea",
+      "default": "sports bar, restaurant, hair salon, barber shop, auto repair shop, medical office, nail salon, wings restaurant, pizza place, brewery, car dealership, fitness center"
+    },
+    "useTopUSCities": {
+      "title": "Use Top US Cities",
+      "description": "If true, ignores 'location' and targets the top most populated US cities.",
+      "type": "boolean",
+      "default": false
+    },
+    "maxCities": {
+      "title": "Max Cities",
+      "description": "When 'Use Top US Cities' is enabled, the maximum number of cities to target. Set to 7 for daily automation system.",
+      "type": "integer",
+      "default": 7,
+      "minimum": 1,
+      "maximum": 100
+    },
+    "location": {
+      "title": "Location (text, or 'lat,lng')",
+      "description": "Location to search around (address or 'lat,lng').",
+      "type": "string",
+      "editor": "textfield",
+      "default": "San Francisco, CA"
+    },
+    "radiusMeters": {
+      "title": "Search radius in meters",
+      "description": "Radius to search around the location, in meters.",
+      "type": "integer",
+      "default": 10000,
+      "minimum": 100
+    },
+    "maxPerTerm": {
+      "title": "Max results per term",
+      "description": "Maximum number of results to fetch per search term. Lower values reduce API costs.",
+      "type": "integer",
+      "default": 30,
+      "minimum": 1,
+      "maximum": 200
+    },
+    "maxDailyCost": {
+      "title": "Max daily cost (USD)",
+      "description": "Maximum amount to spend on Google API calls per run. Scraper will stop when this limit is reached.",
+      "type": "integer",
+      "default": 20,
+      "minimum": 1,
+      "maximum": 500
+    },
+    "enableRateLimiting": {
+      "title": "Enable rate limiting",
+      "description": "Enable API rate limiting to prevent overbilling and respect API quotas.",
+      "type": "boolean",
+      "default": true
+    },
+    "cohortCount": {
+      "title": "Cohort Count",
+      "description": "Total number of daily cohorts to cycle through (e.g., 10 = complete all cities every 10 days).",
+      "type": "integer",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 30
+    },
+    "cityCohortIndex": {
+      "title": "City Cohort Index",
+      "description": "Which cohort to process today (0-based). Set to -1 for automatic daily rotation.",
+      "type": "integer",
+      "default": -1,
+      "minimum": -1,
+      "maximum": 29
+    },
+    "persistDedupe": {
+      "title": "Persistent Deduplication",
+      "description": "Enable persistent deduplication across runs using Key-Value Store.",
+      "type": "boolean",
+      "default": true
+    },
+    "cooldownDays": {
+      "title": "Cooldown Days",
+      "description": "Number of days to wait before re-scraping the same place.",
+      "type": "integer",
+      "default": 30,
+      "minimum": 0,
+      "maximum": 365
+    }
+  },
+  "required": ["searchTerms", "location"]
+} 

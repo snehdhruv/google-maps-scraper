@@ -1,0 +1,11 @@
+{
+  "searchTerms": "sports bar, restaurant, hair salon, barber shop, auto repair shop, medical office, nail salon, wings restaurant, pizza place, brewery, car dealership, fitness center",
+  "useTopUSCities": true,
+  "maxCities": 7,
+  "radiusMeters": 10000,
+  "maxPerTerm": 30,
+  "maxDailyCost": 20,
+  "enableRateLimiting": true,
+  "cohortCount": 14,
+  "cityCohortIndex": 0
+}
