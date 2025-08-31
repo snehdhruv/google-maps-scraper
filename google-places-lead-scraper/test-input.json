@@ -1,13 +1,12 @@
 {
-  "searchTerms": "sports bar",
+  "searchTerms": "restaurant, hair salon",
   "useTopUSCities": true,
-  "maxCities": 1,
-  "radiusMeters": 5000,
-  "maxPerTerm": 10,
-  "maxDailyCost": 5,
-  "enableRateLimiting": true,
+  "maxCities": 3,
   "cohortCount": 10,
   "cityCohortIndex": 0,
-  "bigQueryDataset": "lead_pipeline",
-  "bigQueryTable": "leads_scraped"
+  "radiusMeters": 5000,
+  "maxPerTerm": 5,
+  "maxDailyCost": 2,
+  "enableRateLimiting": true,
+  "location": "San Francisco, CA"
 }

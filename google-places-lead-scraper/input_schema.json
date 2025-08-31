@@ -14,13 +14,13 @@
       "title": "Use Top US Cities",
       "description": "If true, ignores 'location' and targets the top most populated US cities.",
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "maxCities": {
       "title": "Max Cities",
-      "description": "When 'Use Top US Cities' is enabled, the maximum number of cities to target. Set to 7 for daily automation system.",
+      "description": "When 'Use Top US Cities' is enabled, the maximum number of cities to target. Set to 10 for daily automation system.",
       "type": "integer",
-      "default": 7,
+      "default": 10,
       "minimum": 1,
       "maximum": 100
     },

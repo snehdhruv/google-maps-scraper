@@ -198,7 +198,7 @@ Actor.main(async () => {
         radiusMeters,
         maxPerTerm,
         enableRateLimiting = true,
-        useTopUSCities = false,
+        useTopUSCities = true,
         maxDailyCost = 20, // Daily cost limit in USD
         // Daily cohort processing
         cohortCount = 10,
